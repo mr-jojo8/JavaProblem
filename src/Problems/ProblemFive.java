@@ -13,5 +13,6 @@ public class ProblemFive {
     public static void main(String args[]){
         System.out.println("Hello World");
         System.out.println("Nice GitHub");
+        System.out.println("Nice");
     }
 }
