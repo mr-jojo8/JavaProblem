@@ -14,6 +14,5 @@ public class ProblemFive {
         System.out.println("Hello World");
         System.out.println("Nice GitHub");
         System.out.println("Nice");
-        System.out.println("Nice");
     }
 }
