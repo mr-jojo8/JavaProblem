@@ -10,9 +10,13 @@ package Problems;
  * @author user
  */
 public class ProblemFive {
+    
+    private final static String INPUT_FILE_NAME = "input.txt";
+    private final static String OUTPUT_FILE_NAME = "output.txt";
+
     public static void main(String args[]){
-        System.out.println("Hello World");
-        System.out.println("Nice GitHub");
-        System.out.println("Nice");
+        ProblemFive pf = new ProblemFive();
+        
+        
     }
 }
