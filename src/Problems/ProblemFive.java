@@ -15,7 +15,7 @@ public class ProblemFive {
     private final static String OUTPUT_FILE_NAME = "output.txt";
 
     public static void main(String args[]){
-        ProblemFive pf = new ProblemFive();
+        System.out.println("hehe");
         
         
         
