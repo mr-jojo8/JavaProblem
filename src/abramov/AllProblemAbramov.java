@@ -19,12 +19,19 @@ public class AllProblemAbramov {
     Scanner sc = new Scanner(System.in);
     double a, b;
     
+    
+    
     NumberFormat nf = new DecimalFormat(NUMBER_FORMAT);
     
-    public void ProblemOne() {
+    public static void setParam(int i){
+        AllProblemAbramov a = new AllProblemAbramov();
+        a.ProblemOne(i);
+    }
+    
+    public void ProblemOne(int j) {
         //а, b хоёр бодит тоо өгөгдөв. Эдгээр тоонуудын нийлбэр, ялгавар, үржвэрийг ол.
         System.out.println("Problem One Start");
-        
+       
         a = sc.nextDouble();
         b = sc.nextDouble();
 
@@ -66,8 +73,11 @@ public class AllProblemAbramov {
     }
     public static void main(String args[]) {
         AllProblemAbramov allAbromov = new AllProblemAbramov();
-        allAbromov.ProblemOne();
-        allAbromov.ProblemTwo();
-        allAbromov.ProblemThree();
+        
+        int a;
+        Scanner sc = new Scanner(System.in);
+        a = sc.nextInt();
+        setParam(a);
+        
     }
 }
