@@ -97,7 +97,129 @@ public class AllProblemAbramov {
     }
     
     public void ProblemEight() {
-        double a = sc.nextDouble();
+        int a = sc.nextInt();
+        
+        int last = a % 2;
+        if(last == 0) {
+            System.out.println("Even");
+        } else {
+            System.out.println("Odd");
+        }
+    }
+    
+    public void ProblemNine() {
+        Util();
+        
+        double c = sc.nextDouble();
+        
+        if(a > b && b > c) {
+            System.out.println("max : " + nf.format(a));
+        } else if(b > c && c > a){
+            System.out.println("max : " + nf.format(b));
+        } else {
+            System.out.println("max : " + nf.format(c));
+        }
+        
+        double add = a + b + c;
+        double mult = a * b * c;
+        System.out.println("Max : " + nf.format(Math.max(add, mult)));
+    }
+    
+    public void ProblemTen() {
+        int n = sc.nextInt();
+        int a = 0, b = 0, c = 0;
+        
+        if(a <= b && b <= c && c <= n) {
+            
+        }
+       
+    }
+    
+    public void ProblemEleven() {
+        int n = sc.nextInt();
+        
+        int count = 0;
+        while(n > 0) {
+            count++;
+            n = n / 10;            
+        }
+        
+        System.out.println("Count : " + count);
+    }
+    
+    public void ProblemTwelve() {
+        int hour   = sc.nextInt();
+        int minut  = sc.nextInt();
+        int second = sc.nextInt();
+        
+        if(second > 59) {
+            minut  = minut  + second / 60;
+            second = second % 60;
+        }
+        
+        if(minut > 59) {
+            hour  = hour  + minut / 60;
+            minut = minut % 60;
+        }
+        
+        if(hour > 23) {
+            hour = hour % 24;
+        }
+        System.out.println("HH:MM:SS : " + hour + " : " + minut + " : " + second);
+        
+        int lastHour   = sc.nextInt();
+        int lastMinut  = sc.nextInt();
+        int lastSecond = sc.nextInt();
+        
+        if(lastSecond > 59) {
+            lastMinut  = lastMinut  + lastSecond / 60;
+            lastSecond = lastSecond % 60;
+        }
+        
+        if(lastMinut > 59) {
+            lastHour  = lastHour  + lastMinut / 60;
+            lastMinut = lastMinut % 60;
+        }
+        
+        if(lastHour > 23) {
+            lastHour = lastHour % 24;
+        }
+        
+        lastHour   = hour   + lastHour;
+        lastMinut  = minut  + lastMinut;
+        lastSecond = second + lastSecond;
+        
+        if(lastSecond > 59) {
+            lastMinut  = lastMinut + 1;
+            lastSecond = lastSecond - 60;
+        }
+        
+        if(lastMinut > 59) {
+            lastHour  = lastHour + 1;
+            lastMinut = lastMinut - 60;
+        }
+        
+        if(lastHour > 23) {
+            lastHour = lastHour - 24;
+        }
+       
+        System.out.println("HH:MM:SS : " +  lastHour + " : " + lastMinut + " : " + lastSecond);
+    }
+    
+    public void ProblemThirtheen(){
+        int a = sc.nextInt();
+        
+        int tmp = 0;
+        int sum = 0;
+        int b;
+        
+        while(a > 0) {
+            tmp = a % 10;
+
+            sum = sum + (tmp * tmp * tmp);
+        }
+        
+        System.out.println(sum + " : " + tmp);
         
     }
     
@@ -134,6 +256,25 @@ public class AllProblemAbramov {
                 case 7 :
                     System.out.println("Problem No: 7 | n натурал тоо ба a1, ..., an бодит тоонууд өгөгдөв. Дараах илэрхийллийн утгыг ол: a1+...+an");
                     allAbromov.ProblemSeven();
+                    break;
+                case 8 :
+                    System.out.println("Problem No: 8 | Өгөгдсөн бүхэл тоог тэгш эсэхийг шалга.");
+                    allAbromov.ProblemEight();
+                    break;
+                case 9 :
+                    System.out.println("Problem No: 9 | x, y бодит тоонууд өгөгдөв. max(x, y)-г ол.");
+                    allAbromov.ProblemNine();
+                case 11 :
+                    System.out.println("Problem No: 11 | n натурал тоо өгөгдөв. n тоо хэдэн цифртэй вэ?");
+                    allAbromov.ProblemEleven();
+                    break;
+                case 12 : 
+                    System.out.println("Problem No: 12 | ");
+                    allAbromov.ProblemTwelve();
+                    break;
+                case 13 :
+                    System.out.println("Problem No: 13 | Amstrong number");
+                    allAbromov.ProblemThirtheen();
                     break;
             }                
     }
